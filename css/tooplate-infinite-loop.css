@@ -697,3 +697,15 @@ p {
     margin: 0;
   }
 }
+
+.client-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  max-height: 80px; /* Adjust as needed */
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
