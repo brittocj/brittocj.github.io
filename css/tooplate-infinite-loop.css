@@ -849,3 +849,40 @@ html, body {
 .tm-footer p {
   margin: 0;
 }
+/* ==================================
+   Full Contact Section Dark Overlay
+   ================================== */
+
+#contact {
+  position: relative; /* required for overlay */
+  z-index: 1;
+}
+
+/* Overlay layer */
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* transparent black */
+  z-index: -1;
+}
+
+/* Ensure content stays above overlay */
+#contact > * {
+  position: relative;
+  z-index: 2;
+}
+/* Improve text contrast */
+#contact h2,
+#contact p,
+#contact .contact-item {
+  color: #ffffff;
+}
+#contact::before {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+#infinite {
+  background-size: cover;
+  background-position: center;
+}
