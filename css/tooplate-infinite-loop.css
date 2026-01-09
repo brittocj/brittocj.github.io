@@ -787,4 +787,16 @@ p {
 .trusted-logos {
   margin-bottom: 20px !important;
 }
+/* Align Submit + Verify horizontally */
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* mobile friendly */
+}
+
+.contact-actions .tm-btn-submit {
+  width: auto;
+  margin-bottom: 0;
+}
 

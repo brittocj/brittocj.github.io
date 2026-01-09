@@ -156,6 +156,7 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>    
@@ -445,12 +446,20 @@
 
           <div class="col-md-6">
             <form id="contactForm">
-  <input type="text" id="name" placeholder="Your Name" class="tm-input" required />
-  <input type="email" id="email" placeholder="Your Email" class="tm-input" required />
-  <textarea id="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-  <button type="submit" class="btn tm-btn-submit">Submit</button>
-</form>
+              <input type="text" id="name" placeholder="Your Name" class="tm-input" required />
+              <input type="email" id="email" placeholder="Your Email" class="tm-input" required />
+              <textarea id="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
+
+              <!-- Buttons row -->
+              <div class="contact-actions">
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+
+              <div class="g-recaptcha"
+                  data-sitekey="6Ld490QsAAAAAOUVuXM-qsD9aFculQBwT2J_jPKI"></div>
           </div>
+  </form>
+</div>
+
 
           <div class="col-md-6">
             <div class="contact-item">
@@ -516,7 +525,8 @@
 
   $(window).trigger('scroll');
 </script>
-// Form submission handling
+
+<!-- AWS SES -->
 <script>
   document.getElementById("contactForm").addEventListener("submit", async function (e) {
     e.preventDefault();
