@@ -494,23 +494,6 @@
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      $(window).scroll(function() {
-        var heroHeight = $('#infinite').outerHeight(); // Height of hero section
-        var scrollTop = $(window).scrollTop();
-
-        if (scrollTop > heroHeight - 80) { // Trigger a bit before leaving hero
-          $('.tm-navbar .navbar-brand, .tm-navbar .nav-link').css('color', '#333'); // Dark color
-          $('.tm-navbar').addClass('tm-navbar-scrolled');
-        } else {
-          $('.tm-navbar .navbar-brand, .tm-navbar .nav-link').css('color', ''); // Reset to white
-          $('.tm-navbar').removeClass('tm-navbar-scrolled');
-        }
-      });
-
-      // Trigger on page load in case user refreshes mid-page
-      $(window).trigger('scroll');
-    </script>
-    <script>
   $(window).scroll(function() {
     var heroHeight = $('#infinite').outerHeight();
     var scrollTop = $(window).scrollTop();
