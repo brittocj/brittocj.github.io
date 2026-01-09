@@ -18,6 +18,23 @@
     <meta property="og:url" content="https://www.g9clouds.com">
     <meta property="og:image" content="https://www.g9clouds.com/img/og-image.png">
     <style>
+  /* Brand always blue */
+  .tm-navbar .navbar-brand {
+    color: #007bff !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  /* When scrolled: dark links, but brand stays blue */
+  .tm-navbar-scrolled .nav-link {
+    color: #333 !important;
+  }
+
+  .tm-navbar-scrolled .navbar-brand {
+    color: #007bff !important; /* Ensures it stays blue */
+  }
+
+  /* Rest of your existing scrolled styles */
   .tm-navbar-scrolled {
     background-color: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
@@ -25,15 +42,8 @@
     transition: background-color 0.3s ease;
   }
 
-  /* Ensure links are dark when scrolled */
-  .tm-navbar-scrolled .navbar-brand,
-  .tm-navbar-scrolled .nav-link {
-    color: #333 !important;
-  }
-
-  /* Optional: Change active link color */
   .tm-navbar-scrolled .nav-link.tm-nav-link-active {
-    color: #007bff !important; /* or your tm-text-primary color */
+    color: #007bff !important;
   }
 </style>
 
@@ -471,5 +481,19 @@
       // Trigger on page load in case user refreshes mid-page
       $(window).trigger('scroll');
     </script>
+    <script>
+  $(window).scroll(function() {
+    var heroHeight = $('#infinite').outerHeight();
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > heroHeight - 80) {
+      $('.tm-navbar').addClass('tm-navbar-scrolled');
+    } else {
+      $('.tm-navbar').removeClass('tm-navbar-scrolled');
+    }
+  });
+
+  $(window).trigger('scroll');
+</script>
   </body>
 </html>
