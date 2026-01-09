@@ -523,7 +523,6 @@ figure.effect-honey:hover h2 i {
   background-image: url(../img/infinite-loop-03.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 980px;
   position: relative;
   padding-bottom: 50px;
   padding-top: 100px;
@@ -589,13 +588,13 @@ figure.effect-honey:hover h2 i {
   color: white;
 }
 
-.tm-footer {
+/* .tm-footer {
   position: absolute;
-  bottom: 35px;
+  bottom: 5px;
   left: 0;
   right: 0;
   padding: 0 15px;
-}
+} */
 
 .tm-footer a {
 	color: #fff;
@@ -799,4 +798,70 @@ p {
   width: auto;
   margin-bottom: 0;
 }
+/* .tm-footer,
+.tm-footer-inline {
+  position: static !important;
+} */
 
+@media (min-height: 800px) {
+  #contact {
+    min-height: 100vh;
+  }
+}
+/* Page-level layout to keep footer near bottom */
+html, body {
+  height: 100%;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push footer to bottom when content is short */
+.site-wrapper > section {
+  flex-shrink: 0;
+}
+
+.site-footer {
+  margin-top: auto;          /* 👈 magic line */
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #fff;
+  background: #001828;
+}
+/* Sticky footer setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures it fills viewport */
+} */
+
+/* Make the contact section (last main section) flex-grow to push footer down */
+#contact {
+  flex: 1; /* This pushes the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Optional: helps distribute space */
+}
+
+/* Footer styles - remove absolute positioning */
+.tm-footer {
+  position: static !important; /* Override any absolute */
+  margin-top: auto; /* Key: pushes it to bottom when content is short */
+  padding: 30px 15px 20px;
+  width: 100%;
+}
+
+.tm-footer p {
+  margin-bottom: 0; /* Remove extra bottom margin if desired */
+  padding-bottom: 0; /* Override pb-5 */
+}
