@@ -146,7 +146,7 @@ blockquote {
 
 #infinite {
 	background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
+  background-image: url(../img/infinite-loop-01.webp);
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -698,14 +698,36 @@ p {
   }
 }
 
-.client-logo {
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  max-height: 80px; /* Adjust as needed */
-}
-
 .client-logo:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+/* Trusted By – normalize logo heights, keep colors */
+.trusted-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.client-logo {
+  height: 70px;           /* 👈 normalize height */
+  width: auto;            /* preserve aspect ratio */
+  max-width: 180px;       /* prevent very wide logos */
+  object-fit: contain;
+  filter: none;           /* keep original colors */
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 576px) {
+  .client-logo {
+    height: 55px;
+    max-width: 140px;
+  }
 }
