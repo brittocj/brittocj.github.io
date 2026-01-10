@@ -451,7 +451,7 @@
       <input type="text" id="name" placeholder="Your Name" class="tm-input" required />
       <input type="email" id="email" placeholder="Your Email" class="tm-input" required />
       <textarea id="message" rows="8" name="message" maxlength="2000" placeholder="Type your message" class="tm-input" required></textarea>
-      <div id="char-count">0/2000</div>
+      <div id="char-count">Character count: 0/2000</div>
       <div class="contact-actions">
         <button type="submit" class="btn tm-btn-submit">Submit</button>
         <div class="g-recaptcha"
@@ -542,7 +542,7 @@
       counter.textContent = `${len}/2000`;
 
       // Optional: color warning near max
-      if(len > 1800) counter.style.color = "red";
+      if(len > 1950) counter.style.color = "red";
       else counter.style.color = "gray";
     });
     </script>
