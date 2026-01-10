@@ -852,3 +852,13 @@ html, body {
   background-size: cover;
   background-position: center;
 }
+.tm-down-arrow {
+  font-size: 20px; /* try 16px–24px */
+}
+.tm-down-arrow {
+  font-size: 18px;
+}
+
+.tm-down-arrow-link {
+  padding: 6px;
+}
