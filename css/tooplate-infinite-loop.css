@@ -852,3 +852,94 @@ html, body {
   background-size: cover;
   background-position: center;
 }
+/* .textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textarea-wrapper textarea.tm-input {
+  min-height: 180px;           /* instead of rows */
+  padding-bottom: 34px;        /* space for counter */
+  resize: none;
+}
+.tm-input {
+  width: 100%;
+  box-sizing: border-box;      /* 🔑 MOST IMPORTANT */
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textarea-wrapper textarea.tm-input {
+  min-height: 180px;           /* instead of rows */
+  padding-bottom: 34px;        /* space for counter */
+  resize: none;
+}
+.char-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+}
+.contact-section {
+  align-items: flex-start;
+}
+
+.tm-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: transparent;
+  color: #fff;
+}
+
+.textarea-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.textarea-wrapper textarea {
+  min-height: 200px;
+  padding-bottom: 36px;
+  resize: none;
+}
+
+.char-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  padding-top: 10px; /* aligns with textarea top */
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-item i {
+  font-size: 22px;
+  margin-right: 12px;
+} */
