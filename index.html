@@ -554,7 +554,7 @@
 
     textarea.addEventListener("input", () => {
       const len = textarea.value.length;
-      counter.textContent = `Character count ${len}/2000`;
+      counter.textContent = `Character: count ${len}/2000`;
 
       // Optional: color warning near max
       if(len > 1950) counter.style.color = "red";
