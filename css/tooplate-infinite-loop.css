@@ -952,3 +952,8 @@ textarea.tm-input {
   opacity: 0.8;
   text-align: right;
 }
+@media (max-width: 767px) {
+  .why-choose-g9 {
+    background: #ffffff;
+  }
+}
