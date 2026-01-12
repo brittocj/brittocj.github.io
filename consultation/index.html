@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Consultation Questionnaire – G9 Clouds</title>
+  <meta name="description" content="Discovery questionnaire for cloud, DevOps, security, architecture and Virtual CTO consultation" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../fontawesome-5.5/css/all.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md tm-navbar fixed-top" id="tmNav">
+    <div class="container">
+      <a href="../" class="navbar-brand">G9 Clouds</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../#infinite">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#whatwedo">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="questionnaire-container">
+    <div class="container">
+      <header class="text-center mb-5">
+        <h1 class="tm-hero-title">Free Consultation – Discovery Questionnaire</h1>
+        <p class="lead mt-3">
+          This short questionnaire helps us understand your current setup and where you’d like support.<br>
+          <strong>No technical preparation required.</strong>
+        </p>
+      </header>
+
+      <form id="discovery-form" class="consult-form">
+        
+        <!-- 1. About Your Business -->
+        <section class="question-section">
+          <h2 class="section-title">1. About Your Business</h2>
+
+          <div class="form-group">
+            <label for="companyName">1. Company name <span class="required">*</span></label>
+            <input type="text" id="companyName" name="companyName" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>2. Your role <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="role" value="Founder/CEO" required> Founder / CEO</label>
+              <label><input type="radio" name="role" value="CFO/Finance"> CFO / Finance</label>
+              <label><input type="radio" name="role" value="Operations/Product"> Operations / Product</label>
+              <label><input type="radio" name="role" value="Other"> Other</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="industry">3. Industry <span class="required">*</span></label>
+            <input type="text" id="industry" name="industry" class="form-control" required placeholder="e.g. SaaS, E-commerce, Healthcare...">
+          </div>
+
+          <div class="form-group">
+            <label>4. Company stage <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="stage" value="Early/MVP" required> Early / MVP</label>
+              <label><input type="radio" name="stage" value="Growth"> Growth</label>
+              <label><input type="radio" name="stage" value="Established/Enterprise"> Established / Enterprise</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>5. Team size <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="teamSize" value="1-10" required> 1–10</label>
+              <label><input type="radio" name="teamSize" value="11-50"> 11–50</label>
+              <label><input type="radio" name="teamSize" value="51-200"> 51–200</label>
+              <label><input type="radio" name="teamSize" value="200+"> 200+</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Current Technology Setup -->
+        <section class="question-section">
+          <h2 class="section-title">2. Current Technology Setup (High-Level)</h2>
+
+          <div class="form-group">
+            <label>6. Where is your application or data currently hosted? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="hosting" value="AWS" required> AWS</label>
+              <label><input type="radio" name="hosting" value="Azure"> Azure</label>
+              <label><input type="radio" name="hosting" value="Google Cloud"> Google Cloud</label>
+              <label><input type="radio" name="hosting" value="On-premise"> On-premise</label>
+              <label><input type="radio" name="hosting" value="Mixed / Not sure"> Mixed / Not sure</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>7. Do you have an in-house DevOps / cloud team? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="devopsTeam" value="Yes" required> Yes</label>
+              <label><input type="radio" name="devopsTeam" value="Partially"> Partially</label>
+              <label><input type="radio" name="devopsTeam" value="No"> No</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>8. How confident do you feel about your current setup? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="confidence" value="Very confident" required> Very confident</label>
+              <label><input type="radio" name="confidence" value="Mostly stable"> Mostly stable</label>
+              <label><input type="radio" name="confidence" value="Works but feels fragile"> Works, but feels fragile</label>
+              <label><input type="radio" name="confidence" value="Unsure / reactive"> Unsure / reactive</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. What’s Prompting This Conversation? -->
+        <section class="question-section">
+          <h2 class="section-title">3. What’s Prompting This Conversation?</h2>
+
+          <div class="form-group">
+            <label>9. What best describes your current situation? (select all that apply)</label>
+            <div class="options-grid checkbox-grid">
+              <label><input type="checkbox" name="situation" value="Cloud costs high"> Cloud costs feel higher than expected</label>
+              <label><input type="checkbox" name="situation" value="Reliability/downtime"> Reliability or downtime concerns</label>
+              <label><input type="checkbox" name="situation" value="Security/compliance"> Security or compliance concerns</label>
+              <label><input type="checkbox" name="situation" value="Scaling issues"> Scaling issues</label>
+              <label><input type="checkbox" name="situation" value="No senior oversight"> No senior technical oversight</label>
+              <label><input type="checkbox" name="situation" value="Audit/funding/customer"> Upcoming audit, funding, or customer requirement</label>
+              <label><input type="checkbox" name="situation" value="Second opinion"> Need a second opinion</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>10. Is there a specific event driving this? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="event" value="Growth/scaling" required> Growth / scaling</label>
+              <label><input type="radio" name="event" value="Cost pressure"> Cost pressure</label>
+              <label><input type="radio" name="event" value="Incident/outage"> Incident or outage</label>
+              <label><input type="radio" name="event" value="Audit/compliance"> Audit / compliance</label>
+              <label><input type="radio" name="event" value="Leadership gap"> Leadership gap</label>
+              <label><input type="radio" name="event" value="Planning ahead"> Planning ahead</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Cloud & Cost -->
+        <section class="question-section">
+          <h2 class="section-title">4. Cloud & Cost (No numbers needed)</h2>
+
+          <div class="form-group">
+            <label>11. Do you review cloud costs regularly? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="costReview" value="Monthly" required> Monthly</label>
+              <label><input type="radio" name="costReview" value="Occasionally"> Occasionally</label>
+              <label><input type="radio" name="costReview" value="Rarely"> Rarely</label>
+              <label><input type="radio" name="costReview" value="Not sure"> Not sure</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>12. Would you like help with:</label>
+            <div class="options-grid checkbox-grid">
+              <label><input type="checkbox" name="costHelp" value="Visibility/forecasting"> Cost visibility & forecasting</label>
+              <label><input type="checkbox" name="costHelp" value="Right-sizing"> Right-sizing infrastructure</label>
+              <label><input type="checkbox" name="costHelp" value="Simplification"> Architecture simplification</label>
+              <label><input type="checkbox" name="costHelp" value="Governance"> Governance & controls</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. DevOps & Delivery -->
+        <section class="question-section">
+          <h2 class="section-title">5. DevOps & Delivery</h2>
+
+          <div class="form-group">
+            <label>13. How often do you release changes? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="releaseFrequency" value="Multiple/week" required> Multiple times per week</label>
+              <label><input type="radio" name="releaseFrequency" value="Weekly"> Weekly</label>
+              <label><input type="radio" name="releaseFrequency" value="Monthly"> Monthly</label>
+              <label><input type="radio" name="releaseFrequency" value="Ad-hoc"> Ad-hoc</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>14. Are deployments currently: <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="deploymentQuality" value="Smooth" required> Smooth and predictable</label>
+              <label><input type="radio" name="deploymentQuality" value="Mostly OK"> Mostly OK</label>
+              <label><input type="radio" name="deploymentQuality" value="Risky"> Risky or stressful</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>15. Do you have documented processes? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="processes" value="Yes" required> Yes</label>
+              <label><input type="radio" name="processes" value="Partially"> Partially</label>
+              <label><input type="radio" name="processes" value="No"> No</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Security & Risk -->
+        <section class="question-section">
+          <h2 class="section-title">6. Security & Risk (Plain Language)</h2>
+
+          <div class="form-group">
+            <label>16. Are you confident in your security posture? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="securityConfidence" value="Yes" required> Yes</label>
+              <label><input type="radio" name="securityConfidence" value="Somewhat"> Somewhat</label>
+              <label><input type="radio" name="securityConfidence" value="Unsure"> Unsure</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>17. Do you have any of the following in place?</label>
+            <div class="options-grid checkbox-grid">
+              <label><input type="checkbox" name="securityControls" value="Access controls"> Access controls & least privilege</label>
+              <label><input type="checkbox" name="securityControls" value="Backups/DR"> Backups & disaster recovery</label>
+              <label><input type="checkbox" name="securityControls" value="Monitoring/alerts"> Monitoring & alerts</label>
+              <label><input type="checkbox" name="securityControls" value="Incident plan"> Incident response plan</label>
+              <label><input type="checkbox" name="securityControls" value="None/Not sure"> None / Not sure</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>18. Any compliance needs?</label>
+            <div class="options-grid checkbox-grid">
+              <label><input type="checkbox" name="compliance" value="ISO 27001"> ISO 27001</label>
+              <label><input type="checkbox" name="compliance" value="SOC 2"> SOC 2</label>
+              <label><input type="checkbox" name="compliance" value="GDPR"> GDPR</label>
+              <label><input type="checkbox" name="compliance" value="Customer-specific"> Customer-specific requirements</label>
+              <label><input type="checkbox" name="compliance" value="None"> None currently</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Architecture & Future Readiness -->
+        <section class="question-section">
+          <h2 class="section-title">7. Architecture & Future Readiness</h2>
+
+          <div class="form-group">
+            <label>19. How well do you think your current setup will support growth over the next 12–24 months? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="futureReadiness" value="Very well" required> Very well</label>
+              <label><input type="radio" name="futureReadiness" value="Some improvements"> Some improvements needed</label>
+              <label><input type="radio" name="futureReadiness" value="Significant changes"> Significant changes required</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>20. Are there architectural decisions you’re unsure about? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="archUnsure" value="Yes" required> Yes</label>
+              <label><input type="radio" name="archUnsure" value="No"> No</label>
+              <label><input type="radio" name="archUnsure" value="Not sure"> Not sure</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Virtual CTO / Senior Oversight -->
+        <section class="question-section">
+          <h2 class="section-title">8. Virtual CTO / Senior Oversight</h2>
+
+          <div class="form-group">
+            <label>21. Do you currently have a senior technical decision-maker you trust? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="seniorDecisionMaker" value="Yes" required> Yes</label>
+              <label><input type="radio" name="seniorDecisionMaker" value="Part-time/advisory"> Part-time / advisory</label>
+              <label><input type="radio" name="seniorDecisionMaker" value="No"> No</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>22. Would ongoing senior guidance be helpful for:</label>
+            <div class="options-grid checkbox-grid">
+              <label><input type="checkbox" name="seniorGuidance" value="Strategy"> Technology strategy</label>
+              <label><input type="checkbox" name="seniorGuidance" value="Vendor/cost"> Vendor & cost decisions</label>
+              <label><input type="checkbox" name="seniorGuidance" value="Risk management"> Risk management</label>
+              <label><input type="checkbox" name="seniorGuidance" value="Team guidance"> Team guidance</label>
+              <label><input type="checkbox" name="seniorGuidance" value="Board/investor"> Board / investor confidence</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. Engagement Preferences -->
+        <section class="question-section">
+          <h2 class="section-title">9. Engagement Preferences</h2>
+
+          <div class="form-group">
+            <label>23. What kind of support are you looking for? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="supportType" value="One-time" required> One-time assessment</label>
+              <label><input type="radio" name="supportType" value="Short/project"> Short engagement (project-based)</label>
+              <label><input type="radio" name="supportType" value="Ongoing/Virtual CTO"> Ongoing advisory / Virtual CTO</label>
+              <label><input type="radio" name="supportType" value="Not sure"> Not sure yet</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>24. When would you like to start? <span class="required">*</span></label>
+            <div class="options-grid">
+              <label><input type="radio" name="startTimeline" value="Immediately" required> Immediately</label>
+              <label><input type="radio" name="startTimeline" value="1-3 months"> Next 1–3 months</label>
+              <label><input type="radio" name="startTimeline" value="Planning phase"> Planning phase</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. Final Notes + Submit -->
+        <section class="question-section submit-section">
+          <div class="form-group text-center">
+            <div class="g-recaptcha d-inline-block mb-3" data-sitekey="6Ld490QsAAAAAOUVuXM-qsD9aFculQBwT2J_jPKI"></div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn tm-btn-primary btn-lg px-5">
+              Submit Questionnaire
+            </button>
+            <p class="mt-3 small text-muted">
+              There’s no obligation after this consultation.<br>
+              If we believe we’re not the right fit, we’ll say so honestly.
+            </p>
+          </div>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <footer class="tm-footer text-center py-4">
+    <p>© 2026 G9 Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/jquery-1.9.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
