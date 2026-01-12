@@ -237,8 +237,8 @@ blockquote {
 	padding: 20px 0 30px 0;
 }
 
-/* Testimonials */
-#testimonials {
+/* Why-us */
+#why-us {
   color: white;
   background-image: url(../img/infinite-loop-02.webp);
   background-size: cover;
@@ -248,12 +248,12 @@ blockquote {
 }
 
 @media (max-width: 991px) {
-  #testimonials {
+  #why-us {
     background-image: url(../img/infinite-loop-02.webp);
   }
 }
 
-.tm-testimonials-content {
+.tm-why-us-content {
   position: relative;
   z-index: 100;
 }
@@ -270,7 +270,7 @@ blockquote {
   z-index: 0;
 }
 
-.tm-testimonials-carousel {
+.tm-why-us-carousel {
   max-width: 1050px;
   margin: 0 auto;
 }
@@ -324,14 +324,14 @@ blockquote {
   color: #3ba0dd;
 }
 
-.tm-testimonials-carousel .slick-dots li button:before {
+.tm-why-us-carousel .slick-dots li button:before {
   color: white;
   opacity: 0.5;
 }
 
-.tm-testimonials-carousel .slick-dots li button:hover:before,
-.tm-testimonials-carousel .slick-dots li button:focus:before,
-.tm-testimonials-carousel .slick-dots li.slick-active button:before {
+.tm-why-us-carousel .slick-dots li button:hover:before,
+.tm-why-us-carousel .slick-dots li button:focus:before,
+.tm-why-us-carousel .slick-dots li.slick-active button:before {
   color: white;
   opacity: 1;
 }
@@ -917,4 +917,38 @@ html, body {
 .contact-actions {
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+.feature-col {
+  padding: 0 30px;
+  position: relative;
+}
+
+.feature-col.with-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: #7fa7c2;
+}
+@media (max-width: 767px) {
+  .with-divider {
+    border-left: none;
+  }
+
+  .feature-col.with-divider::before {
+    display: none;
+  }
+}
+textarea.tm-input {
+  margin-bottom: 2px;
+}
+
+#char-count {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: right;
 }
