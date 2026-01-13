@@ -175,3 +175,19 @@ label {
 .tm-input:valid {
   border-color: #2ecc71;
 }
+
+/* =============================================
+   Initial navbar text color (before scroll)
+   ============================================= */
+.tm-navbar:not(.scrolled) .nav-link {
+  color: #6c757d !important;
+}
+
+.tm-navbar:not(.scrolled) .nav-link:hover {
+  color: var(--primary) !important;   /* optional: keep blue hover from start */
+}
+
+/* Brand - keep blue or make grey too */
+.tm-navbar:not(.scrolled) .navbar-brand {
+  color: var(--primary) !important;
+}
