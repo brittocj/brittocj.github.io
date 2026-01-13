@@ -22,7 +22,7 @@ document.getElementById('discovery-form')?.addEventListener('submit', async func
 
   try {
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbyZ-Pm1c6l7uoGO4a9ubo9WMStSIrhLOFQJRaxfV1Ad0XChgvzuJIfOZ8vnCGydbCQzjQ/exec',
+      'https://script.google.com/macros/s/AKfycbzcjERlqJ66tiIX3Ao95bBUlZffddJTXEsACFBdRjz-Wp5FcM8pUUYul1pj-nWhof0jSg/exec',
       { method: 'POST', body: formData }
     );
 
