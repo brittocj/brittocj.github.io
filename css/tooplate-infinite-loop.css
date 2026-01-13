@@ -489,6 +489,7 @@ figure.effect-honey:hover h2 i {
   color: white;
   background-color: #001828;
   background-image: url(../img/contact.webp);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
