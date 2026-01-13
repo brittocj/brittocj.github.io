@@ -699,7 +699,7 @@ p {
   text-shadow:
     0 0 0 rgba(255, 255, 255, 0),
     0 0 0 rgba(255, 255, 255, 0);
-  animation: heroGlow 1.6s ease-out forwards;
+  animation: heroGlow 3s ease-out forwards;
 }
 
 @keyframes heroGlow {

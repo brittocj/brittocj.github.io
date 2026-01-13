@@ -204,7 +204,7 @@
  
   <div class="text-center tm-hero-text-container">
     <div class="tm-hero-text-container-inner" style="position: relative; z-index: 10;"><br>
-      <h2 class="tm-hero-title">G9 Clouds</h2>
+      <h2 style="text-shadow: 2px 2px 2px #333;" class="tm-hero-title">G9 Clouds</h2>
       <p class="tm-hero-subtitle">
         <h3 style="text-shadow: 2px 2px 2px #333;">A Calm, Senior Cloud Partner for Businesses<br> That Value Stability</h3><br>
         We manage cloud and infrastructure carefully<br> for teams without in-house DevOps, so you can focus<br> on running the business - not firefighting IT.
@@ -565,11 +565,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("contact-form");
+    const messageInput = document.getElementById("message");
+    const charCount = document.getElementById("char-count");
 
     if (!form) {
         console.error("contact-form not found in DOM");
         return;
     }
+
+    // Live character counter (you probably already have this somewhere)
+    messageInput.addEventListener("input", () => {
+        const length = messageInput.value.length;
+        charCount.textContent = `Character count: ${length}/2000`;
+    });
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -583,7 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const payload = {
             name: document.getElementById("name")?.value.trim(),
             email: document.getElementById("email")?.value.trim(),
-            message: document.getElementById("message")?.value.trim(),
+            message: messageInput?.value.trim(),
             recaptcha: recaptchaToken
         };
 
@@ -601,8 +609,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (response.ok && result.success) {
                 alert("✅ Message sent successfully!");
-                form.reset();           // ✅ SAFE now
+                
+                form.reset();
                 grecaptcha.reset();
+                
+                // Reset counter
+                charCount.textContent = "Character count: 0/2000";
+
             } else {
                 alert("❌ Failed to send message.");
                 grecaptcha.reset();
