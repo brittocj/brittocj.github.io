@@ -48,6 +48,62 @@
     otherInput.required = true;
   }
 });</script>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+
+      const form = document.getElementById("contact-form");
+      const phoneInput = document.getElementById("phone");
+      const emailInput = document.getElementById("email");
+
+      // Real-time phone validation (only digits + length check)
+      if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+          // Remove anything that's not a digit
+          this.value = this.value.replace(/\D/g, '');
+          
+          // Optional: auto-limit to 10 digits
+          if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10);
+          }
+        });
+      }
+
+      // Form submit validation
+      form.addEventListener("submit", function (e) {
+        let isValid = true;
+
+        // Reset previous error messages
+        document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+
+        // Phone validation
+        if (phoneInput) {
+          const phoneValue = phoneInput.value.trim();
+          if (!phoneValue || !/^\d{10}$/.test(phoneValue)) {
+            phoneInput.nextElementSibling.style.display = 'block';
+            phoneInput.focus();
+            isValid = false;
+          }
+        }
+
+        // Email validation (more strict than browser's basic check)
+        if (emailInput) {
+          const emailValue = emailInput.value.trim();
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          if (!emailValue || !emailRegex.test(emailValue)) {
+            emailInput.nextElementSibling.style.display = 'block';
+            emailInput.focus();
+            isValid = false;
+          }
+        }
+
+        if (!isValid) {
+          e.preventDefault();
+          return false;
+        }
+
+        // If everything is good → continue with your existing fetch/recaptcha logic
+      });
+
+    });</script>
 </head>
 <body>
 
@@ -90,13 +146,35 @@
           </div>
 
           <div class="form-group">
-            <label for="email">2. Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" class="form-control" required>
-          </div>
+  <label for="phone">Phone Number <span class="required">*</span></label>
+  <input 
+    type="tel" 
+    id="phone" 
+    name="phone" 
+    placeholder="Enter 10-digit mobile number" 
+    pattern="[0-9]{10}" 
+    maxlength="10" 
+    required 
+    class="tm-input form-control"
+  />
+  <small class="error-message" style="color: #e74c3c; display: none;">
+    Please enter a valid 10-digit phone number (only numbers)
+  </small>
+</div>
 
           <div class="form-group">
-            <label for="phone">3. Phone number <span class="required">*</span></label>
-            <input type="text" id="phone" name="phone" class="form-control" required>
+            <label for="email">Email <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Your Email" 
+              class="tm-input form-control" 
+              required
+            />
+            <small class="error-message" style="color: #e74c3c; display: none;">
+              Please enter a valid email address
+            </small>
           </div>
 
           <div class="form-group">
