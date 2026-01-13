@@ -168,9 +168,11 @@ blockquote {
 }
 
 .tm-hero-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
+  /* color:#007bff; */
   text-shadow: 2px 2px 2px #333;
 }
+
 
 .tm-hero-subtitle {
   text-shadow: 2px 2px 2px #333;
